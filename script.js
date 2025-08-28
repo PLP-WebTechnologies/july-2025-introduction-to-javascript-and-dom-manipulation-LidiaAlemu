@@ -7,3 +7,12 @@ if (userAge >= 18) {
 } else {
     welcomeMsg.textContent = `Hello ${userName}, please explore our kid-friendly section.`;
 }
+
+
+function calculateTotal(cart) {
+    return cart.reduce((sum, item) => sum + item.price * item.quantity, 0);
+}
+
+function formatProduct(name, price) {
+    return `${name} - $${price}`;
+}
