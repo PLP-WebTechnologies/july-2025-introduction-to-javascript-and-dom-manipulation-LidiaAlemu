@@ -16,3 +16,17 @@ function calculateTotal(cart) {
 function formatProduct(name, price) {
     return `${name} - $${price}`;
 }
+
+// Part 3: Loops
+let products = [
+    {name: "T-Shirt", price: 25},
+    {name: "Jeans", price: 50},
+    {name: "Jacket", price: 100}
+];
+
+let productsList = document.getElementById("products-list");
+products.forEach(product => {
+    let li = document.createElement("li");
+    li.textContent = formatProduct(product.name, product.price);
+    productsList.appendChild(li);
+});
